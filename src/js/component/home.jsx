@@ -1,4 +1,6 @@
 import React from "react";
+import { SecondsCounter } from "./SecondsCounter";
+import { CountDown } from "./CountDown";
 
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
@@ -7,18 +9,18 @@ import rigoImage from "../../img/rigo-baby.jpg";
 const Home = () => {
 	return (
 		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+			<div className = "mt-2">
+				<h1 className="text-decoration-underline"> Simple Counter </h1>
+			</div>
+			<SecondsCounter/>
+
+			<div clasName = "mt-2">
+				<h1 className="text-decoration-underline"> Count Down </h1>
+			</div>
+
+			<CountDown duration = { 2 * 24 * 60 * 60 * 1000}/>
+			
+
 		</div>
 	);
 };
